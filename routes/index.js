@@ -1,4 +1,4 @@
-﻿var myUtil = require('../myUtil.js');
+﻿var myUtil = require('../util/myUtil.js');
 var $ = require('jQuery');
 var http = require('http');
 var url="http://mp.weixin.qq.com/mp/getmasssendmsg?__biz=MjM5NTY2NjY4Nw&key=b0212c493356f8b0ad417e39d44eee253901cbd3300c0fa382c22a21fe774ca276cdd2a341f55257c1a31606bd54fcc0==#wechat_redirect";
@@ -16,6 +16,7 @@ http.createServer(function(request, response) {
 	});
 }).listen(9999); 
  console.log("Server has started."); 
+ 
 
 
 
