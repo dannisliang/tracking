@@ -10,12 +10,12 @@ var conn = mysql.createConnection({
 
 
 //获取单个对象信息
-var getItem=function(sql,params){
+var getItem=function(sql,params,callback){
 	exports.query(sql,params);
 }
 //获取列表信息
-var getList=function(sql,params){
-	return query(sql,params);
+var getList=function(sql,params,callback,res){
+	return query(sql,params,callback,res);
 }
 //添加单个信息
 var addItem=function(){
@@ -26,14 +26,15 @@ var delItem=function(){
 	exports.query(sql,params);
 }
 //query查询操作
-var query=function(sql,params){
+var query=function(sql,params,callback,res){
 	conn.connect();
 	console.log(sql);
 	conn.query(sql,params, function(err, rows, fields) {
 		if (err) throw err;
 		console.log("db:query");
 		console.log(rows);
-		return rows;
+		console.log(res);
+		callback(rows,res);
 	});
 	conn.end();
 }
