@@ -15,11 +15,11 @@ var getItem=function(sql,params,callback){
 }
 //获取列表信息
 var getList=function(sql,params,callback,res){
-	return query(sql,params,callback,res);
+	query(sql,params,callback,res);
 }
 //添加单个信息
-var addItem=function(){
-	exports.query(sql,params);
+var addItem=function(sql,params,callback){
+	query(sql,params,callback);
 }
 //删除单个信息
 var delItem=function(){

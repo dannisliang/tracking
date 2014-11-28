@@ -1,9 +1,13 @@
 ﻿var user = require('./server/user.js');
+var article = require('./server/article.js');
 var http = require('http');
-var key="c2e1b4ba73895db8e189b8872112f86e92160b980f2dc4b7c30660193b384303954d7d4a02bd19570817754a80ed45b0",
+var $ = require('jQuery');
+var key="122af43c2d88d49d92194f6762e236ab479bf8ee4e1f61f96ee6e66a113daa5870a3fb9a026f729d14e58a7f1124f65d",
 uid="ODM2NDE0NTIx",
+wechat_id="MjM5NTY2NjY4Nw",
 prefix="http://mp.weixin.qq.com/mp/getmasssendmsg?__biz=",
-subfix="==&uin="+exports.uid+"&key="+exports.key;
+subfix="==&uin="+uid+"&key="+key;
+var list;
 //var constant = require('./constant.js');
 var robot = require('./util/robot.js');
 //console.log(constant);
@@ -12,11 +16,22 @@ http.createServer(function(request,response){
 	user.getWechatUsers(null,response);
 }).listen(9999);*/
 function getCont(){
-	var url=prefix+"MjM5NTY2NjY4Nw"+subfix;
+	var url=prefix+wechat_id+subfix;
 	//console.log(url);
+	//url="http://192.168.2.194:6999/test3.html";
 	robot.getCont(url,printCont);
 }
-var printCont=function(data){
-	console.log(data);
+var printCont=function(text){
+	if(/msgList = '(\S*)'/.test(text)){
+		str = RegExp["$1"];
+		str = htmlDecode(str);
+		list = JSON.parse(str);
+	}
+	console.log(list);
+	article.addArticle(list);
 }
+
 getCont();
+function htmlDecode(e) {
+	return e.replace(/&#39;/g, "'").replace(/<br\s*(\/)?\s*>/g, "\n").replace(/&nbsp;/g, " ").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&amp;/g, "&");
+}
