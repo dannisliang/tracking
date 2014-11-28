@@ -27,16 +27,14 @@ var delItem=function(){
 }
 //query查询操作
 var query=function(sql,params,callback,res){
-	conn.connect();
-	console.log(sql);
+	if(!conn._connectCalled){
+		conn.connect();
+	}
 	conn.query(sql,params, function(err, rows, fields) {
 		if (err) throw err;
-		console.log("db:query");
-		console.log(rows);
-		console.log(res);
 		callback(rows,res);
 	});
-	conn.end();
 }
-
-exports.getList=getList;
+exports.getList = getList;
+exports.addItem = addItem;
+exports.delItem = delItem;
