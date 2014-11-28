@@ -18,17 +18,26 @@ http.createServer(function(request,response){
 function getCont(){
 	var url=prefix+wechat_id+subfix;
 	//console.log(url);
-	//url="http://192.168.2.194:6999/test3.html";
+	url="http://192.168.2.194:6999/test3.html";
 	robot.getCont(url,printCont);
 }
 var printCont=function(text){
+	/*var str_arr=[];
+	for(var i=0;i<27857;i++){
+		str_arr[i]=i;
+	}
+	str_arr=str_arr.join("")+"ee";*/
+	//console.log(text);
+	console.log(/msgList = '(\S*)/.test(text));
+	console.log(RegExp["$1"]);
+	//console.log(/msgList = '(\S*)'/.test(text));
 	if(/msgList = '(\S*)'/.test(text)){
 		str = RegExp["$1"];
 		str = htmlDecode(str);
 		list = JSON.parse(str);
 	}
 	console.log(list);
-	article.addArticle(list);
+	//article.addArticle(list);
 }
 
 getCont();
