@@ -9,12 +9,12 @@ var getArtList=function(params,res){
 	//var sql="select * from article where ?";
 	db.getList(sql,null,getArticleList,res);
 }
-var addArticle=function(params){
+var addArticle=function(wechat_id,params){
 	console.log("addArticle");
 	params=params.list;
 	for(var i=0;i<params.length;i++){
 		var obj={
-			"wechat_id":1,
+			"wechat_id":wechat_id,
 			"title":params[i].app_msg_ext_info.title,
 			"cont":params[i].app_msg_ext_info.digest,
 			"pv":1,
