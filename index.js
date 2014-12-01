@@ -39,6 +39,7 @@ var printCont=function(text){
 }
 
 getCont();
+//解析返回的数据格式，解析成json字符
 function htmlDecode(e) {
 	return e.replace(/&#39;/g, "'").replace(/<br\s*(\/)?\s*>/g, "\n").replace(/&nbsp;/g, " ").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&amp;/g, "&");
 }
