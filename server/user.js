@@ -1,12 +1,13 @@
-﻿var mysql = require('mysql');
+var mysql = require('mysql');
 var db = require('../util/db.js');
+var user={};
 //获取微信账号列表
-var getWechatUsers=function(params,res){
+var getWechatUsers=function(res){
 	var sql="select * from wechats;";
 	db.getList(sql,null,showUsers,res);
 }
 var showUsers=function(data,res){
-	res.writeHead(200,{"Content-Type":"text/html"});
+	res.writeHead(200,{"Content-Type":"text/html;"});
 	var _str=[];
 	_str.push("<table>");
 	_str.push("<tr><th>微信账号</th><th>微信id</th><th>描述</th></tr>");
@@ -28,9 +29,13 @@ var addUser=function(params,res){
 	};
 	db.addItem(sql,obj,addUserAfter,res);
 }
-var addUserAfter=function(data,res){
-	res.writeHead(200,{"Content-Type":"text/html"});
+var addUserAfter=function(res){
+	res.writeHead(200,{"Content-Type":"text/html;"});
 	res.write("添加成功,<a href=\"\">查看用户列表</a>");
 	res.end();
 }
+
+//获取微信账号列表
 exports.getWechatUsers=getWechatUsers;
+//添加用户成功
+exports.addUserAfter=addUserAfter;
