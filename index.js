@@ -1,6 +1,7 @@
 ﻿var user = require('./server/user.js');
 var article = require('./server/article.js');
 var http = require('http');
+var url = require("url"); 
 var $ = require('jQuery');
 var key="ae7efdf4934858e5267e166045d9c50ed003b312d3a87d2843acfccd6dc4576335579796d3fd2cabf226e341b40f3123",
 uid="ODM2NDE0NTIx",
@@ -8,16 +9,19 @@ wechat_id="MjM5OTM5OTAyMQ",
 prefix="http://mp.weixin.qq.com/mp/getmasssendmsg?__biz=",
 subfix="==&uin="+uid+"&key="+key;
 var list;
-//var constant = require('./constant.js');
 var robot = require('./util/robot.js');
-//console.log(constant);
 
 http.createServer(function(request,response){
-	user.getWechatUsers(null,response);
+	//获取请求的路径参数
+	var pathname = url.parse(request.url).pathname;  
+	console.log(pathname);
+	response.writeHead(200,{"Content-Type":"text/html"});
+	response.write(pathname);
+	response.end();
 }).listen(9999);
+console.log("server start");
 function getCont(){
 	var url=prefix+wechat_id+subfix;
-	//console.log(url);
 	//url="http://192.168.2.194:6999/test2.html";
 	robot.getCont(url,printCont);
 }

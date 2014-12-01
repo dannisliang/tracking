@@ -6,7 +6,6 @@ var getWechatUsers=function(params,res){
 	db.getList(sql,null,showUsers,res);
 }
 var showUsers=function(data,res){
-	
 	res.writeHead(200,{"Content-Type":"text/html"});
 	var _str=[];
 	_str.push("<table>");
