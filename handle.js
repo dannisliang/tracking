@@ -5,5 +5,7 @@ var handle = {}
 exports.handle=handle;
 handle["/user"] = user.getWechatUsers;
 handle["/user/list"] = user.getWechatUsers;
+handle["/user/addView"] = user.addUserTpl;
+handle["/user/addUser"] = user.addUser;
 handle["/user/add/success"] = user.addUserAfter;
 

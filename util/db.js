@@ -18,8 +18,8 @@ var getList=function(sql,params,callback,res){
 	query(sql,params,callback,res);
 }
 //添加单个信息
-var addItem=function(sql,params,callback){
-	query(sql,params,callback);
+var addItem=function(sql,params,callback,res){
+	query(sql,params,callback,res);
 }
 //删除单个信息
 var delItem=function(){
@@ -32,7 +32,7 @@ var query=function(sql,params,callback,res){
 	}
 	conn.query(sql,params, function(err, rows, fields) {
 		if (err) throw err;
-		callback(rows,res);
+		callback(res,rows);
 	});
 }
 exports.getList = getList;

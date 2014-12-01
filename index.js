@@ -5,9 +5,9 @@ var article = require('./server/article.js');
 var robot = require('./util/robot.js');
 var route = require("./routes/routes.js").route; 
 var handle= require('./handle.js');
-var key="79fe9d124416dd83e53014936cdea67369315c7499cb662973dcc7face2dca6599a820831011188d7f7807db4953ce9d",
+var key="51c90acbdd2a5cc27c7eea0a9ddd42f75beb937c9739110c13bbcf0774633d91541860ecda6589cc50bdbfff4f0c8a45",
 uid="ODM2NDE0NTIx",
-wechat_id="MjM5OTM5OTAyMQ",
+wechat_id="MjM5NTIxNjI0Mg",
 prefix="http://mp.weixin.qq.com/mp/getmasssendmsg?__biz=",
 subfix="==&uin="+uid+"&key="+key;
 var list;
@@ -30,11 +30,15 @@ var printCont=function(text){
 		str = htmlDecode(str);
 		list = JSON.parse(str);
 	}
-	//将解析后的json数据插入到文章列表中
-	article.addArticle(4,list);
+	if(list){
+		//将解析后的json数据插入到文章列表中
+		article.addArticle(6,list);
+	}else{
+		console.log("key过期需要重新获取");
+	}
 }
 
-//getCont();
+getCont();
 function htmlDecode(e) {
 	return e.replace(/&#39;/g, "'").replace(/<br\s*(\/)?\s*>/g, "\n").replace(/&nbsp;/g, " ").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&amp;/g, "&");
 }
