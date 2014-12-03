@@ -5,11 +5,7 @@ var article = require('./server/article.js');
 var robot = require('./util/robot.js');
 var route = require("./routes/routes.js").route; 
 var handle= require('./handle.js');
-var key="51c90acbdd2a5cc27c7eea0a9ddd42f75beb937c9739110c13bbcf0774633d91541860ecda6589cc50bdbfff4f0c8a45",
-uid="ODM2NDE0NTIx",
-wechat_id="MjM5NTIxNjI0Mg",
-prefix="http://mp.weixin.qq.com/mp/getmasssendmsg?__biz=",
-subfix="==&uin="+uid+"&key="+key;
+
 var list;
 
 http.createServer(function(request,response){
@@ -17,8 +13,14 @@ http.createServer(function(request,response){
 	var pathname = url.parse(request.url).pathname; 
 	route(handle.handle,pathname,response,request);
 }).listen(9999);
+
 console.log("server start");
 function getCont(){
+	var key="4c02ecf06e19ca024e5437be81c200769493c9e8ce85e805885375e060a2cc07340004c296ada7de6fc8b0538a97cc97",
+	uid="ODM2NDE0NTIx",
+	wechat_id="MzA4NDMzNjMyNQ",
+	prefix="http://mp.weixin.qq.com/mp/getmasssendmsg?__biz=",
+	subfix="==&uin="+uid+"&key="+key;
 	var url=prefix+wechat_id+subfix;
 	//url="http://192.168.2.194:6999/test2.html";
 	robot.getCont(url,printCont);
@@ -32,13 +34,13 @@ var printCont=function(text){
 	}
 	if(list){
 		//将解析后的json数据插入到文章列表中
-		article.addArticle(6,list);
+		article.addArticle(7,list);
 	}else{
 		console.log("key过期需要重新获取");
 	}
 }
 
-getCont();
+//getCont();
 //解析返回的数据格式，解析成json字符
 function htmlDecode(e) {
 	return e.replace(/&#39;/g, "'").replace(/<br\s*(\/)?\s*>/g, "\n").replace(/&nbsp;/g, " ").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&amp;/g, "&");

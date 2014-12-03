@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 2014-12-01 10:32:42
+-- Generation Time: 2014-12-03 06:57:28
 -- 服务器版本： 5.6.17
 -- PHP Version: 5.5.12
 
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `article` (
   `datetime` int(11) DEFAULT NULL,
   `article_id` varchar(100) DEFAULT NULL COMMENT '文章id（微信中）',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=57 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=77 ;
 
 --
 -- 转存表中的数据 `article`
@@ -102,7 +102,17 @@ INSERT INTO `article` (`id`, `wechat_id`, `title`, `cont`, `pv`, `praise`, `clas
 (53, 6, '普京驱逐华商前传：灰色的市场', '俄罗斯经济系列目录      01 前苏联经济风云 战斗民族的两次大饥荒02 星球大战 前苏联解体中的经济问', 1, 1, 1, 'http:\\/\\/mp.weixin.qq.com\\/s?__biz=MjM5NTIxNjI0Mg==&amp;mid=202379300&amp;idx=1&amp;sn=ef61d676f487def383690d815b510760&amp;scene=4#wechat_redirect', '', 'http:\\/\\/mmbiz.qpic.cn\\/mmbiz\\/9R5G8icrQr4BiaqHS5OLcDatUvdicRIY45fzRfD3PBHFyEuJg0CnaqWk2fPuZCpibGrhhBHq0nPJ5Mxhxp5XTu7W1w\\/0', 1416558867, NULL),
 (54, 6, '普京大帝的阿基里斯之踵 俄罗斯经济问题', '俄罗斯经济系列目录      01 前苏联经济风云 战斗民族的两次大饥荒02 星球大战 前苏联解体中的经济问', 1, 1, 1, 'http:\\/\\/mp.weixin.qq.com\\/s?__biz=MjM5NTIxNjI0Mg==&amp;mid=202336521&amp;idx=1&amp;sn=01af1336ae922c5870f75d805115209f&amp;scene=4#wechat_redirect', '', 'http:\\/\\/mmbiz.qpic.cn\\/mmbiz\\/9R5G8icrQr4Cv1Zz3mG9hTn6m85r6Pr4OhOSxqDZlIUnTH7sN971J2pdicgLKJiaw8icCLhFzJHphkaQJVRFPHnHNA\\/0', 1416480199, NULL),
 (55, 6, '反寡头 普京大帝的救赎', '俄罗斯经济系列目录      01 前苏联经济风云 战斗民族的两次大饥荒02 星球大战 前苏联解体中的经济问', 1, 1, 1, 'http:\\/\\/mp.weixin.qq.com\\/s?__biz=MjM5NTIxNjI0Mg==&amp;mid=202226294&amp;idx=1&amp;sn=fcc0b42033883865c889cb924f9e114d&amp;scene=4#wechat_redirect', '', 'http:\\/\\/mmbiz.qpic.cn\\/mmbiz\\/9R5G8icrQr4BKJeNAic0MVnpRI6Z3OATqfkRxKib9cO1WIDonCzIEk7B1Yic25KgXOaqpzOIaSgm4v6ZXSV9whSibQw\\/0', 1416305072, NULL),
-(56, 6, '解读沪港通：会带来A股牛市吗？', '中国股市系列目录      01 梦想与疯狂：近代中国股票史02 810风波：新中国第一次股灾03 3·27', 1, 1, 1, 'http:\\/\\/mp.weixin.qq.com\\/s?__biz=MjM5NTIxNjI0Mg==&amp;mid=202202098&amp;idx=1&amp;sn=94f33aa6deead8e068b1132b554ebca3&amp;scene=4#wechat_redirect', '', 'http:\\/\\/mmbiz.qpic.cn\\/mmbiz\\/9R5G8icrQr4BrkLb2JTibTTic9iaNpZb28DoakICxAwFS3ddhh38UdoGWpohichM9N2efojvNlNcmXmaFibYkh7KOwEQ\\/0', 1416221531, NULL);
+(56, 6, '解读沪港通：会带来A股牛市吗？', '中国股市系列目录      01 梦想与疯狂：近代中国股票史02 810风波：新中国第一次股灾03 3·27', 1, 1, 1, 'http:\\/\\/mp.weixin.qq.com\\/s?__biz=MjM5NTIxNjI0Mg==&amp;mid=202202098&amp;idx=1&amp;sn=94f33aa6deead8e068b1132b554ebca3&amp;scene=4#wechat_redirect', '', 'http:\\/\\/mmbiz.qpic.cn\\/mmbiz\\/9R5G8icrQr4BrkLb2JTibTTic9iaNpZb28DoakICxAwFS3ddhh38UdoGWpohichM9N2efojvNlNcmXmaFibYkh7KOwEQ\\/0', 1416221531, NULL),
+(67, 7, '“大资管”背景下银行通道业务风险思考', '作者：金杜律师事务所 陈胜 沈迪\\\\n\\\\n“大资管”时代来临，多种类型的金融管理机构为投资者提供丰富多元的投资渠道。近日，一些一度被叫停入市的机构或将重获银行间债市“入场券”。在此资管新政背景下，本文就银行通道业务的发展趋势、挑战及风险试作阐述。', 1, 1, 1, 'http:\\/\\/mp.weixin.qq.com\\/s?__biz=MzA4NDMzNjMyNQ==&amp;mid=201928771&amp;idx=1&amp;sn=e610074e5a2436f899d8bb2d446ca211&amp;scene=4#wechat_redirect', '', 'http:\\/\\/mmbiz.qpic.cn\\/mmbiz\\/xIk2YdR9JwjEUibLPtA2vT6Ykt9Bk5O5mr6OHwibuUSBYQJjibM43jZicaxT50jmK1oZGsE2J4BZqn6wk5rj1cSauQ\\/0', 1417492119, '201928773'),
+(68, 7, '专栏丨中国在非洲投资的监管', '作者：金杜律师事务所 Paul Schroder 熊进\\\\n\\\\n非洲国家的法律框架一般不对外国投资设置障碍或对外国投资方附加条件，但在实践中会通过其他方式来达到限制或监管外国投资的政治目的。而如何利用法律原则确保对非投资顺利进行，本文试做阐述。', 1, 1, 1, 'http:\\/\\/mp.weixin.qq.com\\/s?__biz=MzA4NDMzNjMyNQ==&amp;mid=201907374&amp;idx=1&amp;sn=939380cfa22afe6f8f453565598a6c66&amp;scene=4#wechat_redirect', '', 'http:\\/\\/mmbiz.qpic.cn\\/mmbiz\\/xIk2YdR9JwgTpMm5ERH41tZErKppT6ZD09jvqrqLyxmn9yCREF2ShRE2M14CiaumgLT5DswW1ugCfFxLNNEeicag\\/0', 1417405371, '201907375'),
+(69, 7, '案例丨颜色商标能否成为“保护色”', '作者：金杜律师事务所  廖飞 \\\\n\\\\n作为非传统商标中的一个重要形态，颜色商标近些年来在许多国家的立法以及司法实践中逐渐受到重视。本文梳理了海外比较有影响力的颜色商标保护实例，供大家参考。', 1, 1, 1, 'http:\\/\\/mp.weixin.qq.com\\/s?__biz=MzA4NDMzNjMyNQ==&amp;mid=201850071&amp;idx=1&amp;sn=43dc03bf845a19bedf9e496e9b2fc840&amp;scene=4#wechat_redirect', '', 'http:\\/\\/mmbiz.qpic.cn\\/mmbiz\\/xIk2YdR9JwiaHSGM2weSiaDwqYowfwaPiaCcOR8Fn2Iu3Sejw71ms3SLU60cxzlg9ACnvCXosGoxDiacEm0QqaFMLw\\/0', 1417146324, '201850073'),
+(70, 7, '聚焦丨律所能否开展上市公司环保核查业务', '作者：金杜律师事务所  吴青  廖倬跃\\\\n\\\\n“149号文”的颁布令拟上市公司的环境表现评估工作全面市场化，随之而来的问题是上市公司的环保表现如何判断？公司的上市律师是否将面临更大的责任和风险？律所能否开展环保核查业务？本文就上述问题展开讨论。', 1, 1, 1, 'http:\\/\\/mp.weixin.qq.com\\/s?__biz=MzA4NDMzNjMyNQ==&amp;mid=201827317&amp;idx=1&amp;sn=98751fb49fd17a93f11c91f80bf30ce9&amp;scene=4#wechat_redirect', '', 'http:\\/\\/mmbiz.qpic.cn\\/mmbiz\\/xIk2YdR9JwjHJH53ZOdSWJ7Grc9QPthEsEvaBVKZyjWua7HLSsZpZaBobo5CTetFV297SenTeGvt5KF4Kxo7YQ\\/0', 1417059816, '201827318'),
+(71, 7, '聚焦丨互联网金融的民事责任风险', '作者：金杜律师事务所 跨境争议解决团队 \\\\n\\\\n对于互联网金融各项具体经营模式中民事责任归责的基础和原则，目前尚缺乏直接对应的法律依据。对此，本文拟提出若干建议，供大家实务中参考。', 1, 1, 1, 'http:\\/\\/mp.weixin.qq.com\\/s?__biz=MzA4NDMzNjMyNQ==&amp;mid=201801823&amp;idx=1&amp;sn=1dcadaa166a3e9fb8d109f7930f13dc8&amp;scene=4#wechat_redirect', '', 'http:\\/\\/mmbiz.qpic.cn\\/mmbiz\\/xIk2YdR9Jwjd5nS0MicP6o5tEONkSqogcPCChysFLu8ibmBOWNeBArXw7u0zHJ4HAEwHGaVLwTdVd8uHPc9tCX9Q\\/0', 1416973383, '201801824'),
+(72, 7, '干货丨证监会资产证券化新旧规定对比', '作者：金杜律师事务所 钟鑫 胡喆 陈府申\\\\n\\\\n与证监会于2013年颁布的《证券公司资产证券化业务管理规定》相比, 证券化新规在许多方面均有了较大的突破。对此, 本文将对证券化新规的核心变化要点予以细致梳理。', 1, 1, 1, 'http:\\/\\/mp.weixin.qq.com\\/s?__biz=MzA4NDMzNjMyNQ==&amp;mid=201780674&amp;idx=1&amp;sn=51f149afdb2d86fa6a1008f1f42456b5&amp;scene=4#wechat_redirect', '', 'http:\\/\\/mmbiz.qpic.cn\\/mmbiz\\/xIk2YdR9JwgxjhwmE3891YTxvNiaVNAMibSHpuwuMcRut8upBHnvJ68ehOFcRiaRK7Sib2c63TGAYaNHrbM1Av2QJQ\\/0', 1416891453, '201780675'),
+(73, 7, '案例丨从宝钢联合体对Aquila的收购看中国对澳矿业投资的成功要素', '作者： 金杜律师事务所 熊进\\\\n\\\\n澳大利亚因资源丰富、法治化程度高、技术先进等优势受到中国投资者青睐，但同时对投资者的经验能力也有更高要求。本文透过近期宝钢联合体对Aquila的收购交易，对在澳成功进行矿业并购项目的主要因素进行分析。', 1, 1, 1, 'http:\\/\\/mp.weixin.qq.com\\/s?__biz=MzA4NDMzNjMyNQ==&amp;mid=201752310&amp;idx=1&amp;sn=99b198fa7b9038a0d8da802d7d2a631f&amp;scene=4#wechat_redirect', '', 'http:\\/\\/mmbiz.qpic.cn\\/mmbiz\\/xIk2YdR9JwiadNDvicmTetndCRRLP3Pm6hKXrzUrW0ouW1uGsJlwgXxwndafy5uj87pA4Q53RcONu2cT5KopC0Yg\\/0', 1416800835, '201752311'),
+(74, 7, '深度丨贸仲委发布2015版仲裁规则', '作者：金杜律师事务所  张守志、何薇、陈军、胡科2014年11月4日，中国国际贸易促进委员会修订并通过了《中', 1, 1, 1, 'http:\\/\\/mp.weixin.qq.com\\/s?__biz=MzA4NDMzNjMyNQ==&amp;mid=201681765&amp;idx=1&amp;sn=082f5f06aa4c4858deddbe601ebcfa84&amp;scene=4#wechat_redirect', '', 'http:\\/\\/mmbiz.qpic.cn\\/mmbiz\\/xIk2YdR9JwhzKl4sx2MkSiaHC1oEViaNXzkBGsGyeez6oCcRia9szlgF6HGUb2fMj7hk2FPOLsRS81icGcdT6oo5Mw\\/0', 1416545045, '201681766'),
+(75, 7, '沪港通若干法律风险管窥', '作者：金杜律师事务所 牟蓬  单颖之\\\\n\\\\n11月10日两地证监会正式批准启动沪港通，沪市上涨超过2%，创近三年新高。面对投资者高涨的投资热情，本文将在法律层面就沪港通所涉及的股票代持模式、两市股票交收制度的差异及新股认购事宜作出相应分析。', 1, 1, 1, 'http:\\/\\/mp.weixin.qq.com\\/s?__biz=MzA4NDMzNjMyNQ==&amp;mid=201657713&amp;idx=1&amp;sn=a0d8d93ed0f94eaba7e9bbf02df1df98&amp;scene=4#wechat_redirect', '', 'http:\\/\\/mmbiz.qpic.cn\\/mmbiz\\/xIk2YdR9Jwia5fRGFefTgZerffSDd1LJqTHIIdV8icosxFMvfChKv3uRuuAyR5rBhHbFb19B8vO3CDdPvh01WF9Q\\/0', 1416455008, '201657714'),
+(76, 7, '反垄断法试水互联网行业:3Q案件终审判决评述', '作者：金杜律师事务所 宁宣凤 彭荷月 杨旸 邱薇卿 Sarah Eder 郭少毅\\\\n\\\\n这是最高院审理的首个反垄断法案件，最高院在判决中对反垄断法基本原理，特别是滥用市场支配地位方面的原理，进行了翔实的阐述。', 1, 1, 1, 'http:\\/\\/mp.weixin.qq.com\\/s?__biz=MzA4NDMzNjMyNQ==&amp;mid=201636055&amp;idx=1&amp;sn=44738578c5b46069718fcd5f76742485&amp;scene=4#wechat_redirect', '', 'http:\\/\\/mmbiz.qpic.cn\\/mmbiz\\/xIk2YdR9Jwjns5zuFbpwzmyEIU4HkZBFpnAicCtS2HAxc9RsFadPREtM8RE0ZJlBibmA1QFzteN2XEWOECibwJUBQ\\/0', 1416368539, '201636056');
 
 -- --------------------------------------------------------
 
@@ -119,7 +129,7 @@ CREATE TABLE IF NOT EXISTS `wechats` (
   `desc` varchar(500) NOT NULL COMMENT '公众账号的描述',
   `classify` smallint(6) NOT NULL COMMENT '分类id',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='微信号信息表' AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='微信号信息表' AUTO_INCREMENT=13 ;
 
 --
 -- 转存表中的数据 `wechats`
@@ -131,7 +141,13 @@ INSERT INTO `wechats` (`id`, `wechat_id`, `wechat_code`, `name`, `desc`, `classi
 (3, 'lengxhboss', 'MjM5NzIyODk4MA', '十万个冷笑话', '收集各类笑话，各种萌', 0),
 (4, 'studywww', 'MjM5OTM5OTAyMQ', '3W互联网深度精选', '关注互联网行业趋势、产品创新、创业与投资、互联网领袖言论，每天推荐一篇最有价值的深度互联网干货', 0),
 (5, 'taobaoguijiaoqi', 'MjM5OTM3NjIyMA', '鬼脚七', '鬼脚七，一个简单的人，分享电商', 0),
-(6, 'kenjinrong', 'MjM5NTIxNjI0Mg', '啃金融', '致力于做老少皆宜的金融轻阅读。这没有长篇大论，只有轻松漫画。不卖弄术语，只说大白话，让你一眼看明白华尔街的大事和你身边的菜价有何关联', 0);
+(6, 'kenjinrong', 'MjM5NTIxNjI0Mg', '啃金融', '致力于做老少皆宜的金融轻阅读。这没有长篇大论，只有轻松漫画。不卖弄术语，只说大白话，让你一眼看明白华尔街的大事和你身边的菜价有何关联', 0),
+(7, 'KWM_China', 'MzA4NDMzNjMyNQ', '金杜说法', '金杜律师事务所是兖州地区居于领先地位的综合性律师事务所，专注于为中外客户就各类境内跨境交易提供全方位的法律解决方案。', 0),
+(8, 'zhongwenlaw', 'MjM5NDM5NzIyNA', '中闻律师事务所', '欢迎您关注北京市中闻律师事务公众平台，我们将努力为您提供更加完善的服务', 0),
+(9, 'bjdacheng', 'MzA5ODA2OTAxNg', '大成律师事务所', '北京大成律师事务所', 0),
+(10, 'JUNHE_LegaIUpdates', 'MzA5MzYzMzYyNQ', '君合法律评论', '君合律师对法律实务、立法动态和热点法律问题的评析与探讨。', 0),
+(11, 'bjdeheng', 'MzA4NzQxMDMxNw', '北京德恒律师事务所', '北京德恒律师事务所原名中国律师事务中心', 0),
+(12, 'WeGrandallers', 'MzA3NzQ4NTYwNg', '国浩律师北京事务所', '国浩律师（北京）事务所位于北京市CBD商圈泰康金融大厦..', 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

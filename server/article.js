@@ -24,7 +24,7 @@ var addArticle=function(wechat_id,params){
 			"author":params[i].app_msg_ext_info.author,
 			"cover":params[i].app_msg_ext_info.cover,
 			"datetime":params[i].comm_msg_info.datetime,
-			"article_id",params[i].comm_msg_info.id
+			"article_id":params[i].comm_msg_info.id
 		};
 		var sql="insert into article set ?";
 		db.addItem(sql,obj,getArticleList);
