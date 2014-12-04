@@ -1,14 +1,6 @@
 ﻿var db = require('../util/db.js');
 var $ = require('jQuery');
 //获取微信账号列表
-var getArticle=function(params,res){
-	var sql="select * from wechats;";
-	db.getList(sql,null,showUsers,res);
-}
-var getArtList=function(params,res){
-	//var sql="select * from article where ?";
-	db.getList(sql,null,getArticleList,res);
-}
 var addArticle=function(wechat_id,params){
 	console.log("addArticle");
 	params=params.list;
@@ -33,6 +25,22 @@ var addArticle=function(wechat_id,params){
 var getArticleList=function(data){
 	console.log("添加成功");
 }
+var getListByUser=function(parms,res){
+	var sql="select * from article where wechat_id = ?";
+	var wechat_id=params.wechat_id;
+	db.getList(sql,wechat_id,showArticleList,res);
+}
+var showArticleList=function(res,data){
+	res.writeHead(200,{"Content-Type":"text/html;"});
+	res.write('<head><meta charset="utf-8"/></head>');
+	res.write("文章列表");
+	var _str=[];
+	for(var i=0;i<data.length;i++){
+		
+	}
+	res.end();
+}
 exports.getArticle=getArticle;
 exports.getArtList=getArtList;
 exports.addArticle=addArticle;
+exports.getListByUser=getListByUser;

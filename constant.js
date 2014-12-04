@@ -1,6 +1,10 @@
-﻿exports.key="c2e1b4ba73895db8e189b8872112f86e92160b980f2dc4b7c30660193b384303954d7d4a02bd19570817754a80ed45b0";
+﻿//健值
+exports.key="a3d8d997c6f08cedb3464edf0d1bf8bd30a23886228384cefd348048d45cd14e61142a8995d68fafbd88c6a69a537ddf";
+//用户id
 exports.uid="ODM2NDE0NTIx";
+//url前缀
 exports.prefix="http://mp.weixin.qq.com/mp/getmasssendmsg?__biz=";
+//url后缀
 exports.subfix="==&uin="+exports.uid+"&key="+exports.key;
 
 

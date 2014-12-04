@@ -32,7 +32,7 @@ var query=function(sql,params,callback,res){
 	}
 	conn.query(sql,params, function(err, rows, fields) {
 		if (err) throw err;
-		callback(res,rows);
+		callback(res,rows,params);
 	});
 }
 exports.getList = getList;
