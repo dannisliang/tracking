@@ -24,7 +24,19 @@ var showUsers=function(res,data){
 }
 //添加微信用户
 var addUser=function(res,params){
-	db.addItem(sql,obj,getContList,params);
+	var name=params.name,
+	wechat_id=params.wechat_id,
+	wechat_code=params.wechat_code,
+	desc=params.desc;
+	var sql="insert into wechats set ?";
+	var obj={
+		"wechat_id":wechat_id,
+		"wechat_code":wechat_code,
+		"name":name,
+		"desc":desc,
+		"classify":0
+	};
+	db.addItem(sql,obj,getContList,res);
 }
 //获取内容列表
 var getContList=function(res,data,param){

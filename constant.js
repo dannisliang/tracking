@@ -1,5 +1,5 @@
 ﻿//健值
-exports.key="a3d8d997c6f08cedb3464edf0d1bf8bd30a23886228384cefd348048d45cd14e61142a8995d68fafbd88c6a69a537ddf";
+exports.key="1507480b90e51e63ebf80e4db90a25dfbaf1eed459c936ed0b2e6913024a0135aa795aae39f282631e7a5641c16bbee5";
 //用户id
 exports.uid="ODM2NDE0NTIx";
 //url前缀
