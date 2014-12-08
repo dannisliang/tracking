@@ -16,36 +16,15 @@ var showUsers=function(res,data){
 	_str.push("<table>");
 	_str.push("<tr><th>微信账号</th><th>微信id</th><th>描述</th></tr>");
 	for(var i=0;i<data.length;i++){
-		_str.push("<tr><td>"+data[i].name+"</td><td>"+data[i].wechat_id+"</td><td>"+data[i].desc+"</td></tr>");
+		_str.push("<tr><td><a href='/user/artList?wechat_id="+data[i].id+"'>"+data[i].name+"</a></td><td>"+data[i].wechat_id+"</td><td>"+data[i].desc+"</td></tr>");
 	}
 	_str.push("</table>");
 	res.write(_str.join(""));
 	res.end();
 }
 //添加微信用户
-var addUser=function(res,req){
-	var postData = ""; 
-	req.setEncoding("utf8"); 
-	req.addListener("data", function(postDataChunk) { 
-		postData += postDataChunk; 
-    });
-	req.addListener("end", function() {
-		//获取post参数
-		req = query.parse(postData);
-		var name=req.name,
-		wechat_id=req.wechat_id,
-		wechat_code=req.wechat_code,
-		desc=req.desc;
-		var sql="insert into wechats set ?";
-		var obj={
-			"wechat_id":wechat_id,
-			"wechat_code":wechat_code,
-			"name":name,
-			"desc":desc,
-			"classify":0
-		};
-		db.addItem(sql,obj,getContList,res);
-    });
+var addUser=function(res,params){
+	db.addItem(sql,obj,getContList,params);
 }
 //获取内容列表
 var getContList=function(res,data,param){
