@@ -1,0 +1,16 @@
+body, h1, h2, h3, h4, p, ul, ol, dl, dd, fieldset, textarea{margin: 0;}
+.msg_page{background-color: #f4f4f4;font-size: 14px;padding:15px 0;}
+.msg_list{margin:0px 5px 5px;}
+.msg_list_hd{display: none;}
+.msg_list_bd{background-color: #fff;border:1px solid #cacbcb;box-shadow: 0px 1px 2px #ddd;margin: 0px auto;padding: 10px 20px;}
+.msg_wrapper{font-size: 14px;}
+.msg_date{color: #9a9a9a;}
+.msg_inner_wrapper{color: #000;}
+.msg_item{display: block;padding: 0;text-decoration: none;}
+.msg_item.news .msg_item_hd{padding-bottom: 5px;}
+.msg_title{font-size: 18px;font-weight: 700;word-break:break-all;word-wrap:break-word;}
+.msg_cover{display: block;font-size: 0;height: 150px;overflow: hidden;position: relative;text-decoration: none;}
+.msg_item.news .msg_desc{padding-bottom: 10px;padding-top: 10px;}
+.msg_cover img{width: 100%;}
+.msg_desc{color: #9a9a9a;word-break:break-all;word-wrap:break-word;}
+
